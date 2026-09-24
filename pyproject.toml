@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bicc-loss"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Bidirectional connected-component (BiCC) loss for instance-aware segmentation."
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.4",
+    "numpy",
+    "scipy",
+]
+
+[project.optional-dependencies]
+cuda12 = ["cupy-cuda12x"]
+cuda13 = ["cupy-cuda13x"]
